@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia de Componentes Eletrônicos</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topo">
+    <h1>Guia de Componentes Eletrônicos</h1>
+    <p>Consulta rápida para o laboratório: o que cada componente é, onde é usado e qual cuidado tomar na montagem.</p>
+  </header>
+
+  <main class="container">
+    <section class="grid">
+
+      <article class="card">
+        <span class="icone">〰️</span>
+        <h2>Resistor</h2>
+        <span class="tag">Passivo</span>
+        <p><strong>O que é:</strong> componente que se opõe à passagem da corrente elétrica. Sua medida é o ohm (Ω).</p>
+        <p><strong>Para que serve:</strong> limitar corrente e dividir tensão.</p>
+        <p><strong>Usado em:</strong> todos os roteiros.</p>
+        <p class="alerta"><strong>Atenção:</strong> confira o valor pelas cores ou meça com o multímetro, sempre com o resistor fora do circuito. Se faltar um valor, dá para associar dois resistores em série ou em paralelo.</p>
+      </article>
+
+      <article class="card">
+        <span class="icone">🎛️</span>
+        <h2>Potenciômetro</h2>
+        <span class="tag">Passivo</span>
+        <p><strong>O que é:</strong> resistor de resistência variável, ajustada girando um eixo.</p>
+        <p><strong>Para que serve:</strong> controlar volume, brilho e outros ajustes manuais.</p>
+        <p class="alerta"><strong>Atenção:</strong> tem três terminais. Os das pontas são os extremos da resistência e o do meio é o cursor.</p>
+      </article>
+
+      <article class="card">
+        <span class="icone">🔋</span>
+        <h2>Capacitor eletrolítico</h2>
+        <span class="tag">Passivo</span>
+        <p><strong>O que é:</strong> capacitor de grande capacitância, que armazena energia em um campo elétrico. Sua medida é o farad (F).</p>
+        <p><strong>Para que serve:</strong> filtrar ruídos, acoplar e desacoplar sinais e estabilizar a tensão.</p>
+        <p><strong>Usado em:</strong> Roteiros 7 e 8 (amplificadores).</p>
+        <p class="alerta"><strong>Atenção:</strong> tem polaridade, e a faixa marca o terminal negativo. Polaridade invertida ou tensão acima do limite pode estourar o componente. Use óculos de proteção.</p>
+      </article>
+
+      <article class="card">
+        <span class="icone">➡️</span>
+        <h2>Diodo retificador (1N4007)</h2>
+        <span class="tag">Semicondutor</span>
+        <p><strong>O que é:</strong> componente que deixa a corrente passar em apenas um sentido.</p>
+        <p><strong>Para que serve:</strong> retificar corrente alternada e montar portas lógicas simples.</p>
+        <p><strong>Usado em:</strong> Roteiros 1 e 2 (retificador de meia onda e portas AND/OR).</p>
+        <p class="alerta"><strong>Atenção:</strong> a faixa marca o cátodo. Invertido, o circuito não conduz.</p>
+      </article>
+
+      <article class="card">
+        <span class="icone">🔻</span>
+        <h2>Diodo Zener</h2>
+        <span class="tag">Semicondutor</span>
+        <p><strong>O que é:</strong> diodo feito para conduzir no sentido reverso a partir de uma tensão fixa.</p>
+        <p><strong>Para que serve:</strong> regular tensão e criar tensões de referência.</p>
+        <p><strong>Usado em:</strong> Roteiro 3 (regulador) e Roteiro 5 (fonte de corrente).</p>
+        <p class="alerta"><strong>Atenção:</strong> ligue em polarização reversa (cátodo no lado positivo) e sempre com resistor em série. Confira a tensão do modelo: o 1N4733A é de 5,1 V e o 1N4742 é de 12 V.</p>
+      </article>
+
+      <article class="card">
+        <span class="icone">💡</span>
+        <h2>LED</h2>
+        <span class="tag">Semicondutor</span>
+        <p><strong>O que é:</strong> diodo emissor de luz.</p>
+        <p><strong>Para que serve:</strong> sinalização e indicação do estado de um circuito.</p>
+        <p><strong>Usado em:</strong> Roteiros 2 e 5 (saída das portas lógicas e chave com transistor).</p>
+        <p class="alerta"><strong>Atenção:</strong> o terminal mais longo é o ânodo (+). Use sempre um resistor em série, senão o LED queima.</p>
+      </article>
+
+      <article class="card">
+        <span class="icone">🔀</span>
+        <h2>Transistor bipolar (BC547 / BC337)</h2>
+        <span class="tag">Semicondutor</span>
+        <p><strong>O que é:</strong> transistor NPN de três terminais que controla uma corrente maior a partir de uma corrente pequena na base.</p>
+        <p><strong>Para que serve:</strong> funcionar como chave eletrônica e como amplificador.</p>
+        <p><strong>Usado em:</strong> Roteiros 4, 5, 7 e 8 (polarização, fonte de corrente, chave e amplificadores).</p>
+        <p class="alerta"><strong>Atenção:</strong> com a face plana voltada para você e os pinos para baixo, a ordem é coletor, base e emissor (da esquerda para a direita). Confira a pinagem antes de ligar a fonte.</p>
+      </article>
+
+      <article class="card">
+        <span class="icone">🧩</span>
+        <h2>CI CD4007 (MOSFET CMOS)</h2>
+        <span class="tag">Semicondutor</span>
+        <p><strong>O que é:</strong> circuito integrado com pares de transistores MOSFET de canal N e canal P.</p>
+        <p><strong>Para que serve:</strong> estudar a curva característica do MOSFET e montar amplificadores e inversores.</p>
+        <p><strong>Usado em:</strong> Roteiro 6.</p>
+        <p class="alerta"><strong>Atenção:</strong> VDD no pino 14 e VSS (terra) no pino 7. É sensível à eletricidade estática e não se deve deixar entradas soltas.</p>
+      </article>
+
+      <article class="card">
+        <span class="icone">☀️</span>
+        <h2>Sensor LDR</h2>
+        <span class="tag">Sensor</span>
+        <p><strong>O que é:</strong> resistor que muda sua resistência conforme a luz que recebe.</p>
+        <p><strong>Para que serve:</strong> detectar luminosidade, como em postes que acendem sozinhos.</p>
+        <p class="alerta"><strong>Atenção:</strong> use em um divisor de tensão para transformar a variação de resistência em variação de tensão.</p>
+      </article>
+
+      <article class="card">
+        <span class="icone">📏</span>
+        <h2>Sensor ultrassônico (HC-SR04)</h2>
+        <span class="tag">Sensor</span>
+        <p><strong>O que é:</strong> sensor que emite ondas sonoras e mede o tempo do eco.</p>
+        <p><strong>Para que serve:</strong> medir distâncias e detectar obstáculos, muito usado em robótica.</p>
+        <p class="alerta"><strong>Atenção:</strong> funciona com 5 V e tem pinos de alimentação, terra, trigger e echo. Não troque VCC e GND.</p>
+      </article>
